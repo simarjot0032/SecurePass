@@ -1,0 +1,46 @@
+@use "./Variables";
+.error-page-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background: Variables.$graident-bg;
+  font-family: Variables.$font-primary;
+}
+.error-page-extra-line {
+  display: block;
+  height: 35px;
+  width: 2px;
+  background-color: Variables.$color-fg-primary;
+}
+.error-page-content-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+.error-page-content {
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.back-to-home {
+  all: unset;
+  padding: 10px 15px;
+  background-color: Variables.$color-secondary;
+  border: 1px solid Variables.$color-fg-primary;
+  border-radius: 15px;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.2s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}

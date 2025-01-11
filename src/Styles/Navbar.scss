@@ -1,0 +1,93 @@
+@use "./Variables";
+.navbar {
+  &-container {
+    background: Variables.$graident-bg;
+    backdrop-filter: blur(10px);
+    padding: 5px 8px 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    box-shadow: 0px 0px 10px 2px rgba(213, 213, 213, 0.517);
+  }
+  &-logo {
+    width: 50px;
+  }
+  &-left-container {
+    display: flex;
+    align-items: center;
+  }
+  &-name {
+    color: Variables.$color-text-primary;
+    font-family: Variables.$font-primary;
+    letter-spacing: 2px;
+    font-size: 1.55rem;
+  }
+  &-right-container {
+    display: flex;
+    gap: 8px;
+  }
+  &-get-started-container {
+    border: 1px solid Variables.$color-fg-primary;
+    background: Variables.$color-secondary;
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  &-get-started-heading,
+  &-login-heading {
+    color: white;
+    font-family: Variables.$font-primary;
+    display: none;
+  }
+  &-get-started-btn {
+    color: Variables.$color-fg-primary;
+  }
+  &-login-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: Variables.$color-secondary;
+    border: 1.9px solid Variables.$color-fg-primary;
+    color: white;
+    border-radius: 10px;
+    padding: 5px;
+  }
+}
+@media screen and (min-width: 500px) {
+  .navbar {
+    &-container {
+      justify-content: space-around;
+      padding: 15px;
+    }
+    &-get-started-heading,
+    &-login-heading {
+      display: block;
+      padding: 5px;
+      font-size: 1.1rem;
+    }
+    &-login-container {
+      padding: 5px 10px;
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .navbar-container {
+    padding: 1rem;
+  }
+  .navbar-right-container {
+    gap: 1rem;
+  }
+}
+@media screen and (max-width: 286px) {
+  .navbar {
+    &-get-started-heading,
+    &-login-heading {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,128 @@
+@use "./Variables";
+.home-hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25px;
+  padding: 10px;
+}
+.hero-section {
+  &-logo {
+    height: 100%;
+    width: 95vw;
+    max-width: 500px;
+    max-height: 500px;
+  }
+  &-heading-tagline {
+    font-size: 2.5rem;
+    color: Variables.$color-text-primary;
+    font-family: Variables.$font-primary;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  &-heading-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  &-heading {
+    color: Variables.$color-text-primary;
+    font-size: 2.5rem;
+    font-family: Variables.$font-primary;
+    display: flex;
+    width: fit-content;
+  }
+}
+.typing {
+  width: 0;
+  overflow: hidden;
+  animation: animation-typing 1.2s linear 0s infinite alternate;
+  letter-spacing: 3.8px;
+}
+.blinker {
+  font-weight: 200;
+  animation: animation-blinker 0.5s linear 0.9s infinite alternate;
+}
+.company-name {
+  text-align: center;
+  font-size: 2.5rem;
+  color: Variables.$color-text-primary;
+  font-family: Variables.$font-primary;
+  font-weight: map-get(Variables.$font-weights, "bold");
+}
+.get-started-btn {
+  all: unset;
+  cursor: pointer;
+  padding: 10px 15px;
+  background-color: transparent;
+  color: Variables.$color-text-primary;
+  font-size: 1.2rem;
+  font-family: Variables.$font-primary;
+  border: 2px solid Variables.$color-text-primary;
+  margin: 2rem;
+  border-radius: 50px;
+  transition: all 0.2s linear;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.get-started-btn:hover {
+  background-color: Variables.$color-secondary;
+  transform: scale(1.1);
+  color: white;
+}
+.home-content-container {
+  margin-top: 2rem;
+  padding: 10px;
+}
+.features-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 50px;
+  justify-content: center;
+}
+// animation defination
+@keyframes animation-blinker {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@keyframes animation-typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+// media quries
+@media screen and (min-width: 768px) {
+  .home-hero-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 5rem;
+    gap: 1rem;
+  }
+  .hero-section-heading {
+    width: fit-content;
+  }
+  .hero-section-heading-tagline {
+    text-align: start;
+  }
+  .hero-section-heading-container {
+    max-width: 390px;
+    align-items: start;
+  }
+  .btn-container {
+    justify-content: start;
+  }
+  .get-started-btn {
+    margin: 2rem 0;
+  }
+}

@@ -1,0 +1,28 @@
+@use "./Variables";
+.card-container {
+  width: 100%;
+  background-color: #383838b6;
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid grey;
+  color: white;
+  &-heading,
+  &-content {
+    font-size: 1.9rem;
+    color: Variables.$color-text-heading;
+    font-weight: map-get(Variables.$font-weights, "bold");
+    font-family: Variables.$font-primary;
+    margin-bottom: 15px;
+    hyphens: auto;
+  }
+  &-content {
+    font-size: 1.2rem;
+    color: white;
+    font-weight: map-get(Variables.$font-weights, "regular");
+  }
+}
+@media screen and (min-width: 650px) {
+  .card-container {
+    width: 40%;
+  }
+}

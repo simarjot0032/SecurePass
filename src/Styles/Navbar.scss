@@ -1,4 +1,5 @@
 @use "./Variables";
+
 .navbar {
   &-container {
     background: Variables.$graident-bg;
@@ -11,6 +12,9 @@
     position: sticky;
     top: 0;
     box-shadow: 0px 0px 10px 2px rgba(213, 213, 213, 0.517);
+  }
+  &-left-container {
+    cursor: pointer;
   }
   &-logo {
     width: 50px;

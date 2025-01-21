@@ -7,6 +7,9 @@
   margin: 0;
   box-sizing: border-box;
 }
+button {
+  cursor: pointer !important;
+}
 
 // Colors
 $color-primary: #1f2021;

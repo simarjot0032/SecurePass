@@ -1,3 +1,4 @@
+"use client";
 import "../../Styles/FeatureCard.scss";
 interface Props {
   cardHeading: string;

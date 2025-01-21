@@ -1,0 +1,37 @@
+@use "./Variables";
+.faq {
+  &-questions-container {
+    background-color: Variables.$color-secondary;
+    color: black;
+    padding: 1.5rem 24px;
+    margin: 2rem;
+    border-radius: 10px;
+    user-select: none;
+  }
+  &-question-container {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &-icon {
+    fill: Variables.$color-text-primary;
+    width: 25px;
+    height: 25px;
+  }
+  &-plus-icon {
+    height: 20px;
+    width: 20px;
+  }
+  &-question {
+    color: Variables.$color-text-primary;
+    font-size: 1.3rem;
+    font-weight: map-get(Variables.$font-weights, "bold");
+  }
+  &-answer {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: map-get(Variables.$font-weights, "regular");
+    margin-top: 10px;
+  }
+}

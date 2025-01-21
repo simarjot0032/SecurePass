@@ -1,15 +1,17 @@
 "use client";
 import "../../Styles/Home.scss";
 import { useEffect, useState } from "react";
-import { FaArrowRightLong } from "react-icons/fa6";
+import { FaArrowRightLong, FaQ } from "react-icons/fa6";
 import FeatureCard from "../Components/FeatureCard";
 import FeatureCardData from "../../Data/FeatureCard";
 import Navbar from "../Components/Navbar";
-
+import FAQ from "../Components/FAQ";
+import FAQData from "@/Data/FAQData";
 export default function HomePage() {
-  const [text, setText] = useState<String>("Secure  ");
-
+  const [text, setText] = useState<string | null>(null);
+  const [questionIndex, setQuestionIndex] = useState<any>(-1);
   useEffect(() => {
+    setText("Secure  ");
     const interval = setInterval(() => {
       setText((prevText) =>
         prevText === "Secure  " ? "Passwords" : "Secure  "
@@ -51,11 +53,27 @@ export default function HomePage() {
             <div className="home-content-container">
               <div className="company-name">Secure Pass Features ! !</div>
               <div className="features-container">
-                {FeatureCardData.map((cardData) => {
+                {FeatureCardData.map((cardData, index) => {
                   return (
                     <FeatureCard
+                      key={index}
                       cardHeading={cardData.heading}
                       cardContent={cardData.content}
+                    />
+                  );
+                })}
+              </div>
+              <div className="faq-parent-container">
+                <h2 className="faq-heading">Frequently Asked Questions</h2>
+                {FAQData.map((question, index) => {
+                  return (
+                    <FAQ
+                      key={index}
+                      question={question.question}
+                      answer={question.answer}
+                      questionState={questionIndex}
+                      index={index}
+                      setQuestionState={setQuestionIndex}
                     />
                   );
                 })}

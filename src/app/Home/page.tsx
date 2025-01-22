@@ -1,7 +1,7 @@
 "use client";
 import "../../Styles/Home.scss";
 import { useEffect, useState } from "react";
-import { FaArrowRightLong, FaQ } from "react-icons/fa6";
+import { FaArrowRightLong } from "react-icons/fa6";
 import FeatureCard from "../Components/FeatureCard";
 import FeatureCardData from "../../Data/FeatureCard";
 import Navbar from "../Components/Navbar";

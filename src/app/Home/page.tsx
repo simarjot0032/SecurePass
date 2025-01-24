@@ -2,10 +2,10 @@
 import "../../Styles/Home.scss";
 import { useEffect, useState } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
-import FeatureCard from "../Components/FeatureCard";
+import FeatureCard from "./FeatureCard";
 import FeatureCardData from "../../Data/FeatureCard";
 import Navbar from "../Components/Navbar";
-import FAQ from "../Components/FAQ";
+import FAQ from "./FAQ";
 import FAQData from "@/Data/FAQData";
 export default function HomePage() {
   const [text, setText] = useState<string | null>(null);

@@ -8,6 +8,7 @@ import FeatureCardData from "@Data/FeatureCard";
 import Navbar from "@Compoenets/Navbar";
 import FAQ from "./Components/FAQ";
 import FAQData from "@/Data/FAQData";
+import Footer from "@Compoenets/Footer";
 export default function HomePage() {
   const [text, setText] = useState<string | null>(null);
   const [questionIndex, setQuestionIndex] = useState<any>(-1);
@@ -52,7 +53,7 @@ export default function HomePage() {
               </div>
             </div>
             <div className="home-content-container">
-              <div className="company-name">Secure Pass Features ! !</div>
+              <div className="company-name">Everything You Need</div>
               <div className="features-container">
                 {FeatureCardData.map((cardData, index) => {
                   return (
@@ -83,6 +84,7 @@ export default function HomePage() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

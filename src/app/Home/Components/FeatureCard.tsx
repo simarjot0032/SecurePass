@@ -1,5 +1,5 @@
 "use client";
-import "../../Styles/FeatureCard.scss";
+import "@Styles/FeatureCard.scss";
 interface Props {
   cardHeading: string;
   cardContent: string;

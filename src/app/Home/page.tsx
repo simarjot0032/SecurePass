@@ -1,11 +1,12 @@
 "use client";
-import "../../Styles/Home.scss";
+import "@Styles/Home.scss";
+import logo from "@assets/logo.png";
 import { useEffect, useState } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
-import FeatureCard from "./FeatureCard";
-import FeatureCardData from "../../Data/FeatureCard";
-import Navbar from "../Components/Navbar";
-import FAQ from "./FAQ";
+import FeatureCard from "./Components/FeatureCard";
+import FeatureCardData from "@Data/FeatureCard";
+import Navbar from "@Compoenets/Navbar";
+import FAQ from "./Components/FAQ";
 import FAQData from "@/Data/FAQData";
 export default function HomePage() {
   const [text, setText] = useState<string | null>(null);
@@ -29,7 +30,7 @@ export default function HomePage() {
           <div className="home-main-container">
             <div className="home-hero-section">
               <img
-                src="/assets/logo.png"
+                src={logo.src}
                 alt="App Logo"
                 className="hero-section-logo"
               />

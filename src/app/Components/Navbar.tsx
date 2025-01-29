@@ -8,7 +8,7 @@ export default function Navbar() {
   return (
     <>
       <div className="navbar-container">
-        <Link href={"/"}>
+        <Link href={"/"} className="navbar-link">
           <div className="navbar-left-container">
             <img src="/assets/logo.png" alt="" className="navbar-logo" />
             <h1 className="navbar-name">SecurePass</h1>

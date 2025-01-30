@@ -11,7 +11,7 @@ import FAQData from "@/Data/FAQData";
 import Footer from "@Compoenets/Footer";
 export default function HomePage() {
   const [text, setText] = useState<string | null>(null);
-  const [questionIndex, setQuestionIndex] = useState<any>(-1);
+  const [questionIndex, setQuestionIndex] = useState<Number>(-1);
   useEffect(() => {
     setText("Secure  ");
     const interval = setInterval(() => {

@@ -15,12 +15,7 @@ button {
 $color-primary: #1f2021;
 $color-fg-primary: rgb(76, 163, 197);
 $color-secondary: #383838b6;
-$graident-bg: linear-gradient(
-  114deg,
-  rgb(13, 13, 13) 50%,
-  rgb(9, 9, 9) 47%,
-  rgb(9, 9, 9) 100%
-);
+$graident-bg: linear-gradient(114deg, #0d0d0d 50%, #090909 47%, #090909 100%);
 $color-text-primary: rgb(114, 179, 244);
 $color-text-heading: #7bbdff;
 

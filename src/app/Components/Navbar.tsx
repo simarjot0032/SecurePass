@@ -8,10 +8,9 @@ import { useState } from "react";
 export default function Navbar() {
   const [shadow, setShadow] = useState<string | null>();
   window.onscroll = () => {
-    window.pageYOffset > 75
-      ? setShadow("shadow-transparent")
-      : setShadow("normal");
+    window.pageYOffset > 75 ? setShadow("shadow-transparent") : setShadow(" ");
   };
+
   return (
     <>
       <div className={`navbar-container  ${shadow}`}>

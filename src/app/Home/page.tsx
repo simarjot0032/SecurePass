@@ -5,10 +5,12 @@ import { useEffect, useState } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import FeatureCard from "./Components/FeatureCard";
 import FeatureCardData from "@Data/FeatureCard";
-import Navbar from "@Compoenets/Navbar";
+
 import FAQ from "./Components/FAQ";
 import FAQData from "@/Data/FAQData";
 import Footer from "@Compoenets/Footer";
+import dynamic from "next/dynamic";
+import Navbar from "@Compoenets/Navbar";
 export default function HomePage() {
   const [text, setText] = useState<string | null>(null);
   const [questionIndex, setQuestionIndex] = useState<Number>(-1);

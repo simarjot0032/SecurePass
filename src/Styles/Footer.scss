@@ -1,5 +1,44 @@
 @use "./Variables";
 .footer {
   &-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 5px;
+    font-family: Variables.$font-primary;
+    font-weight: map-get(Variables.$font-weights, "bold");
+    font-size: 1.5rem;
+    overflow: auto;
+  }
+  &-category-heading {
+    color: Variables.$color-text-primary;
+    text-transform: uppercase;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+  &-list-link-items {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  &-links {
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: Variables.$color-text;
+    font-weight: map-get(Variables.$font-weights, "regular");
+  }
+}
+@media screen and (min-width: 367px) {
+  .footer {
+    &-container {
+      flex-wrap: nowrap;
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    &-container {
+      gap: 25px;
+    }
   }
 }

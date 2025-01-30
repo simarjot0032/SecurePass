@@ -3,14 +3,17 @@ import Link from "next/link";
 import "../../Styles/Navbar.scss";
 import { CiUnlock } from "react-icons/ci";
 import { FaArrowRight } from "react-icons/fa6";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Navbar() {
   const [shadow, setShadow] = useState<string | null>();
-  window.onscroll = () => {
-    window.pageYOffset > 75 ? setShadow("shadow-transparent") : setShadow(" ");
-  };
-
+  useEffect(() => {
+    window.onscroll = () => {
+      window.pageYOffset > 75
+        ? setShadow("shadow-transparent")
+        : setShadow(" ");
+    };
+  }, []);
   return (
     <>
       <div className={`navbar-container  ${shadow}`}>

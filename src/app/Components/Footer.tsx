@@ -53,7 +53,7 @@ export default function Footer() {
                 </li>
                 <li className="footer-list-link-items">
                   <Link href={"/"} className="footer-links">
-                    Password-Strength-Tester
+                    Password-Strength-Checker
                   </Link>
                 </li>
               </ul>

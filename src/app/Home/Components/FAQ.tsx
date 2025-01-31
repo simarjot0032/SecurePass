@@ -33,7 +33,7 @@ function FAQ({
         >
           <p className="faq-question">{question}</p>
           <div className="faq-icon-container">
-            {!isOpen ? (
+            {!isOpen || index != questionState ? (
               <FaPlus className="faq-icon faq-plus-icon" />
             ) : (
               <HiXMark className="faq-icon" />

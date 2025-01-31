@@ -12,7 +12,7 @@
   &-logo {
     height: 100%;
     width: 95vw;
-    max-width: 500px;
+    max-width: 480px;
     max-height: 500px;
   }
   &-heading-tagline {
@@ -27,22 +27,16 @@
     flex-direction: column;
   }
   &-heading {
-    color: Variables.$color-text-primary;
+    color: Variables.$color-text;
     font-size: 2.5rem;
     font-family: Variables.$font-primary;
-    display: flex;
-    width: fit-content;
+    text-align: center;
+    font-weight: map-get(Variables.$font-weights, "regular");
   }
 }
-.typing {
-  width: 0;
-  overflow: hidden;
-  animation: animation-typing 1.2s linear 0s infinite alternate;
-  letter-spacing: 3.8px;
-}
+
 .blinker {
   font-weight: 200;
-  animation: animation-blinker 0.5s linear 0.9s infinite alternate;
 }
 .company-name {
   text-align: center;
@@ -94,23 +88,7 @@
   font-size: 2rem;
 }
 // animation defination
-@keyframes animation-blinker {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-    visibility: visible;
-  }
-}
-@keyframes animation-typing {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }
-}
+
 // media quries
 @media screen and (min-width: 768px) {
   .home-hero-section {
@@ -118,16 +96,19 @@
     flex-direction: row;
     justify-content: center;
     margin-top: 5rem;
-    gap: 1rem;
+    gap: 0rem;
+    padding: 0;
   }
+
   .hero-section-heading {
     width: fit-content;
   }
-  .hero-section-heading-tagline {
+  .hero-section-heading-tagline,
+  .hero-section-heading {
     text-align: start;
   }
   .hero-section-heading-container {
-    max-width: 390px;
+    max-width: 400px;
     align-items: start;
   }
   .btn-container {

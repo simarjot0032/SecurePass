@@ -1,6 +1,7 @@
 @use "./Variables";
 .footer {
   &-container {
+    margin-top: 50px;
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
@@ -17,15 +18,22 @@
     overflow-wrap: break-word;
     hyphens: auto;
   }
+  &-unorderd-lists {
+    margin-top: 15px;
+  }
   &-list-link-items {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
+    list-style: none;
   }
   &-links {
-    font-size: 1.1rem;
+    font-size: 1rem;
     text-decoration: none;
     color: Variables.$color-text;
     font-weight: map-get(Variables.$font-weights, "regular");
+  }
+  &-copy-container {
+    font-family: Variables.$font-primary;
+    color: Variables.$color-text;
+    padding: 20px 0 50px 5px;
   }
 }
 @media screen and (min-width: 367px) {
@@ -38,7 +46,7 @@
 @media screen and (min-width: 768px) {
   .footer {
     &-container {
-      gap: 25px;
+      gap: 55px;
     }
   }
 }

@@ -9,21 +9,10 @@ import FeatureCardData from "@Data/FeatureCard";
 import FAQ from "./Components/FAQ";
 import FAQData from "@/Data/FAQData";
 import Footer from "@Compoenets/Footer";
-import dynamic from "next/dynamic";
+
 import Navbar from "@Compoenets/Navbar";
 export default function HomePage() {
-  const [text, setText] = useState<string | null>(null);
   const [questionIndex, setQuestionIndex] = useState<Number>(-1);
-  useEffect(() => {
-    setText("Secure  ");
-    const interval = setInterval(() => {
-      setText((prevText) =>
-        prevText === "Secure  " ? "Passwords" : "Secure  "
-      );
-    }, 2390);
-
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <>
@@ -42,9 +31,7 @@ export default function HomePage() {
                   Start Securing Your Digital Life Today!
                 </h2>
                 <h2 className="hero-section-heading">
-                  # <span style={{ width: "5px" }}> </span>
-                  <span className="typing">{text}</span>
-                  <span className="blinker">|</span>
+                  <span className="typing">Secure Password Manager</span>
                 </h2>
                 <div className="hero-section-btn-container">
                   <button className="get-started-btn">

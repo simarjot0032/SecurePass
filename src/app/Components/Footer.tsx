@@ -5,7 +5,13 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <>
-      <div className="parent-container">
+      <div
+        className="parent-container"
+        style={{
+          borderTop: "1px solid white",
+          background: "#1f2021",
+        }}
+      >
         <div className="content-container">
           <div className="footer-container">
             <div className="footer-category">
@@ -79,6 +85,9 @@ export default function Footer() {
                 </li>
               </ul>
             </div>
+          </div>
+          <div className="footer-copy-container">
+            Simarjot Singh 2024 - Present. All Rigths Reserved
           </div>
         </div>
       </div>

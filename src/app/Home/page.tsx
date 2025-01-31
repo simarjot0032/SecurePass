@@ -1,25 +1,18 @@
 "use client";
-import "../../Styles/Home.scss";
+import "@Styles/Home.scss";
+import logo from "@assets/logo.png";
 import { useEffect, useState } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
-import FeatureCard from "../Components/FeatureCard";
-import FeatureCardData from "../../Data/FeatureCard";
-import Navbar from "../Components/Navbar";
-import FAQ from "../Components/FAQ";
-import FAQData from "@/Data/FAQData";
-export default function HomePage() {
-  const [text, setText] = useState<string | null>(null);
-  const [questionIndex, setQuestionIndex] = useState<any>(-1);
-  useEffect(() => {
-    setText("Secure  ");
-    const interval = setInterval(() => {
-      setText((prevText) =>
-        prevText === "Secure  " ? "Passwords" : "Secure  "
-      );
-    }, 2390);
+import FeatureCard from "./Components/FeatureCard";
+import FeatureCardData from "@Data/FeatureCard";
 
-    return () => clearInterval(interval);
-  }, []);
+import FAQ from "./Components/FAQ";
+import FAQData from "@/Data/FAQData";
+import Footer from "@Compoenets/Footer";
+
+import Navbar from "@Compoenets/Navbar";
+export default function HomePage() {
+  const [questionIndex, setQuestionIndex] = useState<Number>(-1);
 
   return (
     <>
@@ -29,7 +22,7 @@ export default function HomePage() {
           <div className="home-main-container">
             <div className="home-hero-section">
               <img
-                src="/assets/logo.png"
+                src={logo.src}
                 alt="App Logo"
                 className="hero-section-logo"
               />
@@ -38,9 +31,7 @@ export default function HomePage() {
                   Start Securing Your Digital Life Today!
                 </h2>
                 <h2 className="hero-section-heading">
-                  # <span style={{ width: "5px" }}> </span>
-                  <span className="typing">{text}</span>
-                  <span className="blinker">|</span>
+                  <span className="typing">Secure Password Manager</span>
                 </h2>
                 <div className="hero-section-btn-container">
                   <button className="get-started-btn">
@@ -51,7 +42,7 @@ export default function HomePage() {
               </div>
             </div>
             <div className="home-content-container">
-              <div className="company-name">Secure Pass Features ! !</div>
+              <div className="company-name">Everything You Need</div>
               <div className="features-container">
                 {FeatureCardData.map((cardData, index) => {
                   return (
@@ -82,6 +73,7 @@ export default function HomePage() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

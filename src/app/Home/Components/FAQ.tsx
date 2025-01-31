@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import "../../Styles/FAQ.scss";
+import "@Styles/FAQ.scss";
 import { FaPlus } from "react-icons/fa6";
 import { HiXMark } from "react-icons/hi2";
 interface Props {
@@ -33,7 +33,7 @@ function FAQ({
         >
           <p className="faq-question">{question}</p>
           <div className="faq-icon-container">
-            {!isOpen ? (
+            {!isOpen || index != questionState ? (
               <FaPlus className="faq-icon faq-plus-icon" />
             ) : (
               <HiXMark className="faq-icon" />

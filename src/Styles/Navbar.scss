@@ -4,14 +4,16 @@
   &-container {
     background: Variables.$graident-bg;
     backdrop-filter: blur(10px);
-    padding: 5px 8px 5px 0;
+    padding: 10px 8px 15px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
     position: sticky;
     top: 0;
-    box-shadow: 0px 0px 10px 2px rgba(213, 213, 213, 0.517);
+  }
+  &-link {
+    text-decoration: none;
   }
   &-left-container {
     cursor: pointer;
@@ -26,7 +28,7 @@
   &-name {
     color: Variables.$color-text-primary;
     font-family: Variables.$font-primary;
-    letter-spacing: 2px;
+    letter-spacing: 0px;
     font-size: 1.55rem;
   }
   &-right-container {
@@ -54,7 +56,6 @@
   &-login-container {
     display: flex;
     align-items: center;
-    gap: 5px;
     background: Variables.$color-secondary;
     border: 1.9px solid Variables.$color-fg-primary;
     color: white;
@@ -62,36 +63,47 @@
     padding: 5px;
   }
 }
-@media screen and (min-width: 500px) {
+.spm {
+  display: none;
+}
+.shadow-transparent {
+  background: #212121ac;
+}
+@media screen and (max-width: 355px) {
+  .navbar {
+    &-name {
+      display: none;
+    }
+    &-login-container {
+      padding: 5px;
+    }
+  }
+  .spm {
+    display: block;
+  }
+}
+@media screen and (min-width: 530px) {
   .navbar {
     &-container {
-      justify-content: space-around;
-      padding: 15px;
+      padding: 12px;
     }
     &-get-started-heading,
     &-login-heading {
       display: block;
       padding: 5px;
-      font-size: 1.1rem;
+      font-size: 0.9rem;
     }
     &-login-container {
-      padding: 5px 10px;
+      padding: 5px 8px;
     }
   }
 }
 @media screen and (min-width: 768px) {
   .navbar-container {
     padding: 1rem;
+    justify-content: space-around;
   }
   .navbar-right-container {
     gap: 1rem;
-  }
-}
-@media screen and (max-width: 286px) {
-  .navbar {
-    &-get-started-heading,
-    &-login-heading {
-      display: block;
-    }
   }
 }

@@ -1,7 +1,7 @@
 "use client";
 import "@Styles/Home.scss";
 import logo from "@assets/logo.png";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import FeatureCard from "./Components/FeatureCard";
 import FeatureCardData from "@Data/FeatureCard";

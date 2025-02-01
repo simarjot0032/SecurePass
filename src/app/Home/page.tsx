@@ -9,8 +9,8 @@ import "@Styles/UniversalStyle.scss";
 import FAQ from "./Components/FAQ";
 import FAQData from "@/Data/FAQData";
 import Footer from "@Compoenets/Footer";
-
 import Navbar from "@Compoenets/Navbar";
+
 export default function HomePage() {
   const [questionIndex, setQuestionIndex] = useState<Number>(-1);
 

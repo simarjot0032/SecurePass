@@ -1,7 +1,21 @@
 // Fonts from google fonts
-@import url("https://fonts.googleapis.com/css2?family=Faculty+Glyphic&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("/fonts/SpaceGrotesk-Light.ttf");
+  font-weight: 300;
+}
 
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("/fonts/SpaceGrotesk-Medium.ttf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("/fonts/SpaceGrotesk-Bold.ttf");
+  font-weight: 800;
+}
 * {
   padding: 0;
   margin: 0;
@@ -20,7 +34,7 @@ $color-text-heading: rgb(123, 189, 255);
 $color-text: #f7f7f7f1;
 
 // Fonts
-$font-primary: "Space Grotesk", serif;
+$font-primary: "Space Grotesk";
 
 // Screen Sizes
 $tablet-size: 800px;

@@ -233,6 +233,9 @@
     border-radius: 10px;
     border: 1px solid Variables.$color-text;
   }
+  .navbar-dropdown-icon {
+    border: 0;
+  }
   .dropdown-container > .navbar-link {
     font-size: 20px;
     hyphens: auto;

@@ -69,8 +69,6 @@ export default function Navbar() {
                   <span
                     className="navbar-link navbar-mobile-dropdown-link"
                     onClick={handleDropDown}
-                    onMouseOver={handleDropDown}
-                    onMouseLeave={handleDropDown}
                   >
                     Products
                   </span>
@@ -78,15 +76,11 @@ export default function Navbar() {
                     <FaAngleUp
                       className="navbar-dropdown-icon"
                       onClick={handleDropDown}
-                      onMouseOver={handleDropDown}
-                      onMouseLeave={handleDropDown}
                     />
                   ) : (
                     <FaAngleDown
                       className="navbar-dropdown-icon"
                       onClick={handleDropDown}
-                      onMouseOver={handleDropDown}
-                      onMouseLeave={handleDropDown}
                     />
                   )}
                 </div>
@@ -109,12 +103,15 @@ export default function Navbar() {
             </Link>
             <div
               className="navbar-dropdown-container"
-              onClick={handleDropDown}
-              onMouseEnter={handleDropDown}
               onMouseLeave={handleDropDown}
             >
               <div className="navbar-dropdown-container-header">
-                <span className="navbar-dropdown-link">Products</span>
+                <span
+                  className="navbar-dropdown-link"
+                  onMouseEnter={handleDropDown}
+                >
+                  Products
+                </span>
                 {productsDropOpen ? (
                   <FaAngleUp
                     className="navbar-dropdown-icon"
@@ -127,7 +124,7 @@ export default function Navbar() {
                   />
                 )}
               </div>
-              {productsDropOpen ? <DropDown /> : undefined}
+              {productsDropOpen ? <DropDown /> : null}
             </div>
             <Link href={"/"} className="navbar-link">
               Help Center

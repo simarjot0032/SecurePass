@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <>
       <div
-        className="parent-container"
+        className="parent-container footer-p"
         style={{
           borderTop: "1px solid white",
           background: "#1f2021",
@@ -22,16 +22,7 @@ export default function Footer() {
                     Home
                   </Link>
                 </li>
-                <li className="footer-list-link-items">
-                  <Link href={"/"} className="footer-links">
-                    About
-                  </Link>
-                </li>
-                <li className="footer-list-link-items">
-                  <Link href={"/"} className="footer-links">
-                    Your Vault
-                  </Link>
-                </li>
+
                 <li className="footer-list-link-items">
                   <Link href={"/"} className="footer-links">
                     Login
@@ -87,7 +78,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="footer-copy-container">
-            Simarjot Singh 2024 - Present. All Rigths Reserved
+            Simarjot Singh &copy; 2024 - Present. All Rigths Reserved
           </div>
         </div>
       </div>

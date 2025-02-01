@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import FeatureCard from "./Components/FeatureCard";
 import FeatureCardData from "@Data/FeatureCard";
-
+import "@Styles/UniversalStyle.scss";
 import FAQ from "./Components/FAQ";
 import FAQData from "@/Data/FAQData";
 import Footer from "@Compoenets/Footer";

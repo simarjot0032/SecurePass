@@ -33,7 +33,7 @@ export default function Navbar() {
   return (
     <>
       <div className={`navbar-container  ${shadow}`}>
-        <Link href={"/"} className="navbar-link">
+        <Link href={"/"} className="navbar-logo-link">
           <div className="navbar-left-container">
             <img src="/assets/logo.png" alt="" className="navbar-logo" />
             <h1 className="navbar-name">SecurePassMan</h1>
@@ -129,12 +129,7 @@ export default function Navbar() {
             <Link href={"/"} className="navbar-link">
               Help Center
             </Link>
-            <Link href="/" className="navbar-link">
-              Login
-            </Link>
-            <Link href="/" className="navbar-link">
-              Get Started
-            </Link>
+
             <button className="navbar-get-started-container">
               <span className="navbar-get-started-heading">Get Started</span>
               <FaArrowRight size={25} className="navbar-get-started-btn" />

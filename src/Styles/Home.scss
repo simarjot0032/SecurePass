@@ -34,10 +34,6 @@
     font-weight: map-get(Variables.$font-weights, "regular");
   }
 }
-
-.blinker {
-  font-weight: 200;
-}
 .company-name {
   text-align: center;
   font-size: 2.5rem;
@@ -87,7 +83,17 @@
   text-align: center;
   font-size: 2rem;
 }
-// animation defination
+.products {
+  &-container {
+    margin-top: 50px;
+  }
+  &-heading {
+    color: Variables.$color-text-heading;
+    font-family: Variables.$font-primary;
+    text-align: center;
+    font-size: 2rem;
+  }
+}
 
 // media quries
 @media screen and (min-width: 768px) {

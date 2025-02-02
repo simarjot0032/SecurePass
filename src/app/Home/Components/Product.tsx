@@ -2,7 +2,7 @@
 export default function Product() {
   return (
     <>
-      <div></div>
+      <div className="product-container"></div>
     </>
   );
 }

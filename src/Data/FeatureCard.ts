@@ -8,7 +8,7 @@ const FeatureCardData: FeatureCardType[] = [
     content: "Save and manage all your passwords in one secure place.",
   },
   {
-    heading: "State-of-the-Art Encryption",
+    heading: " Encryption",
     content:
       "Passwords are stored using advanced encryption techniques, ensuring maximum security.",
   },

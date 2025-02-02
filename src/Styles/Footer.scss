@@ -32,7 +32,6 @@
     color: Variables.$color-text;
     font-weight: map-get(Variables.$font-weights, "regular");
     position: relative;
-
     display: flex;
     width: fit-content;
     flex-direction: column-reverse;
@@ -48,6 +47,9 @@
   }
   &-links:hover::before {
     width: 100%;
+  }
+  &-links:hover {
+    color: Variables.$color-text-heading;
   }
   &-copy-container {
     font-family: Variables.$font-primary;

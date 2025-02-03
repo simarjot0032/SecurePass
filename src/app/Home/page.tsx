@@ -10,6 +10,7 @@ import FAQ from "./Components/FAQ";
 import FAQData from "@/Data/FAQData";
 import Footer from "@Compoenets/Footer";
 import Navbar from "@Compoenets/Navbar";
+import Product from "./Components/Product";
 
 export default function HomePage() {
   const [questionIndex, setQuestionIndex] = useState<Number>(-1);
@@ -53,6 +54,10 @@ export default function HomePage() {
                     />
                   );
                 })}
+              </div>
+              <div className="products-container">
+                <h1 className="products-heading">Our Products</h1>
+                <Product />
               </div>
               <div className="faq-parent-container">
                 <h2 className="faq-heading">Frequently Asked Questions</h2>

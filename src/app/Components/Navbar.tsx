@@ -1,10 +1,10 @@
 "use client";
 import Link from "next/link";
-import "../../Styles/Navbar.scss";
+import "@Styles/Navbar.scss";
 import { CiUnlock } from "react-icons/ci";
 import { FaArrowRight } from "react-icons/fa6";
 import { RxHamburgerMenu } from "react-icons/rx";
-import Logo from "@assets/logo.png";
+import Logo from "@assets/Logo.webp";
 import { MdOutlineKeyboardBackspace } from "react-icons/md";
 import { useEffect, useState } from "react";
 import Image from "next/image";
@@ -35,7 +35,7 @@ export default function Navbar() {
       <div className={`navbar-container  ${shadow}`}>
         <Link href={"/"} className="navbar-logo-link">
           <div className="navbar-left-container">
-            <img src="/assets/logo.png" alt="" className="navbar-logo" />
+            <Image src={Logo} alt="site-icon" className="navbar-logo" />
             <h1 className="navbar-name">SecurePassMan</h1>
             <h1 className="navbar-name spm">SPM</h1>
           </div>

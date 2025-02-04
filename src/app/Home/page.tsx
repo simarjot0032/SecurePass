@@ -1,6 +1,6 @@
 "use client";
 import "@Styles/Home.scss";
-import logo from "@assets/logo.png";
+import Logo from "@assets/Logo.webp";
 import { useState } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import FeatureCard from "./Components/FeatureCard";
@@ -23,8 +23,8 @@ export default function HomePage() {
           <div className="home-main-container">
             <div className="home-hero-section">
               <img
-                src={logo.src}
-                alt="App Logo"
+                src={Logo.src}
+                alt="App-Logo"
                 className="hero-section-logo"
               />
               <div className="hero-section-heading-container">

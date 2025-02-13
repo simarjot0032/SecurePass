@@ -34,7 +34,7 @@
     font-weight: map-get(Variables.$font-weights, "regular");
   }
 }
-.company-name {
+.features-tagline {
   text-align: center;
   font-size: 2.5rem;
   color: Variables.$color-text-primary;
@@ -81,7 +81,7 @@
 .faq-heading {
   color: Variables.$color-text-heading;
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 .products {
   &-container {
@@ -91,11 +91,20 @@
     color: Variables.$color-text-heading;
     font-family: Variables.$font-primary;
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.5rem;
+  }
+  &-content-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 50px 0;
   }
 }
 
 // media quries
+
 @media screen and (min-width: 768px) {
   .home-hero-section {
     display: flex;
@@ -122,5 +131,8 @@
   }
   .get-started-btn {
     margin: 2rem 0;
+  }
+  .products-content-container {
+    flex-wrap: nowrap;
   }
 }

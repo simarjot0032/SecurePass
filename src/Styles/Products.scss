@@ -1,0 +1,58 @@
+@use "./Variables";
+.product-container {
+  background-color: Variables.$color-secondary;
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid gray;
+  font-family: Variables.$font-primary;
+  color: Variables.$color-text;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  &-icon {
+    width: 100px;
+    height: 100px;
+    color: Variables.$color-text-heading;
+    margin-bottom: 10px;
+  }
+  &-heading,
+  &-description {
+    margin: 10px 0;
+  }
+  &-heading {
+    font-size: 2rem;
+    color: Variables.$color-text-heading;
+  }
+  &-description {
+    font-size: 1.1rem;
+    flex-grow: 1;
+  }
+  &-use-now {
+    display: flex;
+    justify-content: end;
+  }
+  &-product-link {
+    margin-top: 10px;
+    display: flex;
+    transition: all 0.2s linear;
+    width: fit-content;
+  }
+  &-product-link::after {
+    content: " →";
+    height: 0;
+    width: 0;
+    margin-left: 10px;
+    opacity: 0;
+    transition: all 0.2s linear;
+  }
+  &-product-link:hover {
+    opacity: 1;
+    color: Variables.$color-text-heading;
+  }
+  &-product-link:hover::after {
+    color: Variables.$color-text-heading;
+    height: fit-content;
+    width: fit-content;
+    opacity: 1;
+  }
+}

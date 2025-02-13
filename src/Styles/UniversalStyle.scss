@@ -9,6 +9,10 @@
 .content-container {
   width: 100%;
 }
+a {
+  text-decoration: none;
+  color: Variables.$color-text;
+}
 @media screen and (min-width: 768px) {
   .content-container {
     max-width: Variables.$tablet-size;

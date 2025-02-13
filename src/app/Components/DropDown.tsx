@@ -5,13 +5,13 @@ export default function DropDown() {
   return (
     <>
       <div className="dropdown-container">
-        <Link className="navbar-link " href={"/"}>
+        <Link className="navbar-link " href={"/Vault"}>
           Password Manager
         </Link>
-        <Link className="navbar-link" href={"/"}>
+        <Link className="navbar-link" href={"/Generator"}>
           Password Generator
         </Link>
-        <Link className="navbar-link" href={"/"}>
+        <Link className="navbar-link" href={"/Checker"}>
           Password Strength Checker
         </Link>
       </div>

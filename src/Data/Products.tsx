@@ -18,14 +18,14 @@ export const ProductsArray: Products[] = [
     productLink: "/Vault",
   },
   {
-    productIcon: TbLockPassword,
+    productIcon: CgPassword,
     productName: "Password Generator",
     productDescription:
       "It is a fast and reliable password generator that helps you create strong, unique passwords using numbers, alphanumeric characters to protect your accounts. ",
     productLink: "/Generator",
   },
   {
-    productIcon: CgPassword,
+    productIcon: TbLockPassword,
     productName: "Password Strength Checker",
     productDescription:
       "It analyzes the strength of your passwords in real time, ensuring they meet the highest security standards. ",

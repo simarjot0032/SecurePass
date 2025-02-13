@@ -39,17 +39,17 @@ export default function Footer() {
               <p className="footer-category-heading">Tools</p>
               <ul className="footer-unorderd-lists">
                 <li className="footer-list-link-items">
-                  <Link href={"/"} className="footer-links">
+                  <Link href={"/Vault"} className="footer-links">
                     Password-Manager
                   </Link>
                 </li>
                 <li className="footer-list-link-items">
-                  <Link href={"/"} className="footer-links">
+                  <Link href={"/Generator"} className="footer-links">
                     Password-Generator
                   </Link>
                 </li>
                 <li className="footer-list-link-items">
-                  <Link href={"/"} className="footer-links">
+                  <Link href={"/Checker"} className="footer-links">
                     Password-Strength-Checker
                   </Link>
                 </li>

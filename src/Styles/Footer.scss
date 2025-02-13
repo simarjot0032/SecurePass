@@ -11,6 +11,7 @@
     font-weight: map-get(Variables.$font-weights, "bold");
     font-size: 1.5rem;
     overflow: auto;
+    padding-left: 10px;
   }
   &-category-heading {
     color: Variables.$color-text-primary;
@@ -54,7 +55,7 @@
   &-copy-container {
     font-family: Variables.$font-primary;
     color: Variables.$color-text;
-    padding: 20px 0 50px 5px;
+    padding: 20px 0 50px 10px;
   }
 }
 @media screen and (min-width: 367px) {

@@ -1,4 +1,4 @@
-This project claims all necessary rights so before but all are welcomed to contribute to it for contributing please follow the steps:-
+This project claims all necessary rights. but all are welcomed to contribute to it for contributing please follow the steps:-
 ## Getting Started
  - Fork this repository and clone it.
  - Create a branch under your name/github user name.

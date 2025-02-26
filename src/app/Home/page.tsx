@@ -1,11 +1,9 @@
 "use client";
 import "@Styles/Home.scss";
 import Logo from "@assets/Logo.webp";
-
 import { useState } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { BsDatabaseLock } from "react-icons/bs";
-
 import FeatureCard from "./Components/FeatureCard";
 import FeatureCardData from "@Data/FeatureCard";
 import "@Styles/UniversalStyle.scss";
@@ -18,7 +16,10 @@ import { ProductsArray } from "@/Data/Products";
 
 export default function HomePage() {
   const [questionIndex, setQuestionIndex] = useState<Number>(-1);
-
+  const handleScroll = () => {
+    const generator = document.querySelector(".home-content-container");
+    generator?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
   return (
     <>
       <Navbar />
@@ -39,7 +40,7 @@ export default function HomePage() {
                   <span className="typing">Secure Password Manager</span>
                 </h2>
                 <div className="hero-section-btn-container">
-                  <button className="get-started-btn">
+                  <button className="get-started-btn" onClick={handleScroll}>
                     Get Started!
                     <FaArrowRightLong />
                   </button>

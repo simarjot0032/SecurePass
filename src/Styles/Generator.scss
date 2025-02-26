@@ -9,7 +9,6 @@
   }
   &-hero-logo {
     width: 100%;
-    max-width: 450px;
 
     object-fit: contain;
   }
@@ -20,6 +19,9 @@
     justify-content: center;
     flex-direction: column;
   }
+  &-hero-heading {
+    font-size: 2.5rem;
+  }
   &-hero-heading-container > div {
     display: flex;
     justify-content: center;
@@ -27,7 +29,7 @@
   &-hero-get-started {
     border: 1px solid grey;
     padding: 15px 35px;
-    margin: 20px;
+    margin: 20px 0;
     font-size: 1.2rem;
     border-radius: 20px;
     background-color: Variables.$color-secondary;
@@ -43,13 +45,92 @@
     transform: scale(1.09);
   }
 }
+.generator {
+  &-container {
+    background: Variables.$color-secondary;
+    border: 1px solid Variables.$color-text;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 0 5px;
+  }
+  &-tabs-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 25px 0;
+    flex-wrap: wrap;
+  }
+  &-tab-container {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 10px;
+    color: black;
+    cursor: pointer;
+    font-family: Variables.$font-primary;
+    transition: all 0.2s;
+  }
+  &-tab-container:has(.active) {
+    background: Variables.$color-text-heading;
+  }
+  &-tab-container:not(:has(.active)) {
+    color: Variables.$color-text;
+  }
+  &-tab-container:not(:has(.active)):hover {
+    background: Variables.$color-text-heading;
+    opacity: 0.89;
+    color: black;
+  }
+  &-user-choices-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  &-limit-container,
+  &-additional-container {
+    width: 50%;
+  }
+  &-heading,
+  &-tagline {
+    text-align: center;
+    color: Variables.$color-text;
+    font-family: Variables.$font-primary;
+  }
+  &-heading {
+    font-size: 2.5rem;
+    color: Variables.$color-text-heading;
+    margin-bottom: 5px;
+  }
+  &-tagline {
+    font-size: 1.2rem;
+  }
+  &-content {
+    background: Variables.$graident-bg;
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 10px;
+    color: Variables.$color-text;
+    font-family: Variables.$font-primary;
+  }
+  &-password-heading {
+    font-size: 1.8rem;
+    color: Variables.$color-text-heading;
+  }
+}
 @media screen and (min-width: 768px) {
   .pass-generator {
     &-hero-section {
       display: flex;
+      justify-content: center;
+    }
+    &-hero-logo {
+      width: 50%;
+      max-width: 450px;
     }
     &-hero-heading-container > div {
       justify-content: start;
+    }
+    &-hero-heading {
+      text-align: left;
     }
   }
 }

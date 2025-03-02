@@ -61,7 +61,11 @@ export default function Navbar() {
               />
             </div>
             <div className="navbar-mobile-link-container">
-              <Link href="/" className="navbar-link navbar-mobile-link">
+              <Link
+                href="/"
+                className="navbar-link navbar-mobile-link"
+                onClick={handleMobileMenu}
+              >
                 Home
               </Link>
               <div className="navbar-dropdown-container">
@@ -86,13 +90,25 @@ export default function Navbar() {
                 </div>
                 {productsDropOpen ? <DropDown /> : undefined}
               </div>
-              <Link href={"/"} className="navbar-link navbar-mobile-link">
+              <Link
+                href={"/"}
+                className="navbar-link navbar-mobile-link"
+                onClick={handleMobileMenu}
+              >
                 Help Center
               </Link>
-              <Link href="/" className="navbar-link navbar-mobile-link">
+              <Link
+                href="/"
+                className="navbar-link navbar-mobile-link"
+                onClick={handleMobileMenu}
+              >
                 Login
               </Link>
-              <Link href="/" className="navbar-link navbar-mobile-link">
+              <Link
+                href="/"
+                className="navbar-link navbar-mobile-link"
+                onClick={handleMobileMenu}
+              >
                 Get Started
               </Link>
             </div>

@@ -62,12 +62,12 @@ export default function Generator() {
                   <div className="generator-password-options">
                     <div className="generator-password-types-container">
                       <h2 className="generator-password-heading">Type</h2>
+                      Your Password is : {""}
                     </div>
                     <div className="generator-password-additional-container">
                       <h2 className="generator-password-heading">
                         Additional Options
                       </h2>
-                      <div className="generator-password-heading">Hello</div>
                     </div>
                   </div>
                   <div className="generator-limit-container">

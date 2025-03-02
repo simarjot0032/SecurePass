@@ -165,9 +165,12 @@
 .dropdown-container {
   padding-left: 15px;
 }
-.dropdown-container > .navbar-link:not(:last-child) {
+.dropdown-container > .navbar-link {
   font-size: 20px;
   margin-bottom: 20px;
+}
+.dropdown-container > .navbar-link:is(:last-child) {
+  margin-bottom: 0;
 }
 @media screen and (max-width: 355px) {
   .navbar {
@@ -246,7 +249,7 @@
     border: 0;
   }
   .dropdown-container > .navbar-link {
-    font-size: 18px;
+    font-size: 20px;
     hyphens: auto;
   }
 }

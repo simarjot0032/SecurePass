@@ -1,4 +1,4 @@
-// Fonts from google fonts but on local
+// Fonts from google fonts but stored on local
 @font-face {
   font-family: "Space Grotesk";
   src: url("/fonts/SpaceGrotesk-Light.ttf");
@@ -51,6 +51,6 @@ $screen-size: 1200px;
 //maps
 $font-weights: (
   "regular": 300,
-  "semi-bold": 600,
+  "medium": 600,
   "bold": 800,
 );

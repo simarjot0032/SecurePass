@@ -4,7 +4,7 @@ interface Props {
   cardHeading: string;
   cardContent: string;
 }
-export default function FeatureCard({ cardHeading, cardContent }: Props) {
+export const FeatureCard = ({ cardHeading, cardContent }: Props) => {
   return (
     <>
       <div className="card-container">
@@ -13,4 +13,4 @@ export default function FeatureCard({ cardHeading, cardContent }: Props) {
       </div>
     </>
   );
-}
+};

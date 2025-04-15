@@ -3,7 +3,7 @@ interface FAQ {
   question: string;
   answer: string;
 }
-const FAQData: FAQ[] = [
+export const FAQData: FAQ[] = [
   {
     id: 1,
     question: "What is Secure Pass?",
@@ -35,4 +35,3 @@ const FAQData: FAQ[] = [
       "In addition to passwords, Secure Pass allows you to store other sensitive information like credit card details, notes, and security questions. All data is encrypted to ensure privacy.",
   },
 ];
-export default FAQData;

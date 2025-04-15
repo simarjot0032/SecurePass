@@ -2,19 +2,38 @@
 import "@Styles/Generator.scss";
 import { notFound } from "next/navigation";
 import { useState } from "react";
+
 interface passwordGenerator {
   length: number;
+  isCapital: boolean;
+  isLower: boolean;
+  isNumber: boolean;
+  isSpecial: boolean;
 }
 interface passphraseGenerator {
-  length: number;
+  isCapital: boolean;
+  isNumber: boolean;
+  wordSeprator: string;
 }
+
 export default function Generator() {
   const [passwordType, setPasswordType] = useState<string>("Password");
-  const [passwordData, setPasswordData] = useState<passwordGenerator>();
-  const [phasphraseData, setPasphraseData] = useState<passphraseGenerator>();
+  const [passwordData, setPasswordData] = useState<passwordGenerator>({
+    length: 8,
+    isCapital: true,
+    isLower: true,
+    isNumber: true,
+    isSpecial: false,
+  });
+  const [pasphraseData, setPasphraseData] = useState<passphraseGenerator>({
+    isCapital: true,
+    isNumber: false,
+    wordSeprator: "-",
+  });
   const handleTabChange = (tabName: string) => {
     setPasswordType(tabName);
   };
+  console.log(passwordData, pasphraseData, setPasphraseData, setPasswordData);
   return (
     <>
       <div className="generator-container">
@@ -62,12 +81,33 @@ export default function Generator() {
                   <div className="generator-password-options">
                     <div className="generator-password-types-container">
                       <h2 className="generator-password-heading">Type</h2>
-                      Your Password is : {""}
+                      <div className="generator-password-type">
+                        Your Password is {"  "}{" "}
+                        {/*Due to extra space required */}
+                        <span className="generator-password-type-special">
+                          {"Strong"}
+                        </span>
+                      </div>
                     </div>
                     <div className="generator-password-additional-container">
                       <h2 className="generator-password-heading">
                         Additional Options
                       </h2>
+                      <form action="" className="addtional-options-form">
+                        <div className="input-container">
+                          <input
+                            type="checkbox"
+                            name="additional-form"
+                            id="additional-options-input"
+                          />
+                          <label
+                            htmlFor="additional-options-input"
+                            className="label"
+                          >
+                            A-Z {"Captial Letters"}
+                          </label>
+                        </div>
+                      </form>
                     </div>
                   </div>
                   <div className="generator-limit-container">

@@ -3,19 +3,15 @@ import "@Styles/Home.scss";
 import Logo from "@assets/Logo.webp";
 import { useState } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
-import { BsDatabaseLock } from "react-icons/bs";
-import FeatureCard from "./Components/FeatureCard";
-import FeatureCardData from "@Data/FeatureCard";
 import "@Styles/UniversalStyle.scss";
-import FAQ from "./Components/FAQ";
-import FAQData from "@/Data/FAQData";
 import Footer from "@Compoenets/Footer";
 import Navbar from "@Compoenets/Navbar";
-import Product from "./Components/Product";
-import { ProductsArray } from "@/Data/Products";
+import { FAQData, ProductsArray, FeatureCardData } from "@/Data";
+import Image from "next/image";
+import { FeatureCard, FAQ, Product } from "./Components";
 
 export default function HomePage() {
-  const [questionIndex, setQuestionIndex] = useState<Number>(-1);
+  const [questionIndex, setQuestionIndex] = useState<number>(-1);
   const handleScroll = () => {
     const generator = document.querySelector(".home-content-container");
     generator?.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -27,9 +23,12 @@ export default function HomePage() {
         <div className="content-container">
           <div className="home-main-container">
             <div className="home-hero-section">
-              <img
+              <Image
                 src={Logo.src}
                 alt="App-Logo"
+                objectFit="cover"
+                width={1000}
+                height="1000"
                 className="hero-section-logo"
               />
               <div className="hero-section-heading-container">
@@ -51,9 +50,10 @@ export default function HomePage() {
               <div className="products-container">
                 <h1 className="products-heading">Our Products</h1>
                 <div className="products-content-container">
-                  {ProductsArray.map((ProductData) => {
+                  {ProductsArray.map((ProductData, index) => {
                     return (
                       <Product
+                        key={index}
                         ProductImage={ProductData.productIcon}
                         productHeading={ProductData.productName}
                         productDescription={ProductData.productDescription}

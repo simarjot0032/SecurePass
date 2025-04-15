@@ -51,7 +51,7 @@
     border: 1px solid Variables.$color-text;
     border-radius: 20px;
     padding: 20px;
-    margin: 0 5px;
+    margin: 0 5px 50px;
   }
   &-tabs-container {
     display: flex;
@@ -115,6 +115,40 @@
     font-size: 1.8rem;
     color: Variables.$color-text-heading;
   }
+  &-password-options {
+    padding: 10px;
+  }
+  &-password-heading {
+    margin-bottom: 10px;
+  }
+  &-password-type {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
+  &-password-type-special {
+    color: Variables.$color-text-heading;
+    font-size: 1.5rem;
+    font-weight: map-get(Variables.$font-weights, "medium");
+  }
+
+  .additional-options {
+    &-form {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+  }
+}
+#additional-options-input[type="checkbox"] {
+  accent-color: Variables.$color-text-heading;
+}
+.input-container {
+  display: flex;
+  align-items: center;
+}
+.label {
+  margin-left: 5px;
 }
 @media screen and (min-width: 768px) {
   .pass-generator {

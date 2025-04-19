@@ -1,7 +1,8 @@
 import Link from "next/link";
 import React from "react";
 import "@Styles/Navbar.scss";
-export default function DropDown() {
+
+export const DropDown = () => {
   return (
     <>
       <div className="dropdown-container">
@@ -17,4 +18,4 @@ export default function DropDown() {
       </div>
     </>
   );
-}
+};

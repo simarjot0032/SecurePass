@@ -7,16 +7,16 @@ interface Props {
   question: string;
   answer: string;
   index: number;
-  questionState: any;
-  setQuestionState: any;
+  questionState: number;
+  setQuestionState: React.Dispatch<React.SetStateAction<number>>;
 }
-function FAQ({
+export const FAQ = ({
   question,
   answer,
   index,
   questionState,
   setQuestionState,
-}: Props) {
+}: Props) => {
   const [isOpen, setIsOpen] = useState(false);
   const handleClick = (index: number) => {
     setQuestionState(index);
@@ -46,6 +46,4 @@ function FAQ({
       </div>
     </>
   );
-}
-
-export default FAQ;
+};

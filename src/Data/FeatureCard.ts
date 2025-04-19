@@ -2,7 +2,7 @@ interface FeatureCardType {
   heading: string;
   content: string;
 }
-const FeatureCardData: FeatureCardType[] = [
+export const FeatureCardData: FeatureCardType[] = [
   {
     heading: "Secure Password Management",
     content: "Save and manage all your passwords in one secure place.",
@@ -29,4 +29,3 @@ const FeatureCardData: FeatureCardType[] = [
     content: "Intuitive design for effortless navigation.",
   },
 ];
-export default FeatureCardData;

@@ -10,7 +10,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { FaAngleUp } from "react-icons/fa6";
 import { FaAngleDown } from "react-icons/fa6";
-import DropDown from "./DropDown";
+import { DropDown } from "./DropDown";
 
 export default function Navbar() {
   const [shadow, setShadow] = useState<string | null>();
@@ -61,7 +61,11 @@ export default function Navbar() {
               />
             </div>
             <div className="navbar-mobile-link-container">
-              <Link href="/" className="navbar-link navbar-mobile-link">
+              <Link
+                href="/"
+                className="navbar-link navbar-mobile-link"
+                onClick={handleMobileMenu}
+              >
                 Home
               </Link>
               <div className="navbar-dropdown-container">
@@ -86,13 +90,25 @@ export default function Navbar() {
                 </div>
                 {productsDropOpen ? <DropDown /> : undefined}
               </div>
-              <Link href={"/"} className="navbar-link navbar-mobile-link">
+              <Link
+                href={"/"}
+                className="navbar-link navbar-mobile-link"
+                onClick={handleMobileMenu}
+              >
                 Help Center
               </Link>
-              <Link href="/" className="navbar-link navbar-mobile-link">
+              <Link
+                href="/"
+                className="navbar-link navbar-mobile-link"
+                onClick={handleMobileMenu}
+              >
                 Login
               </Link>
-              <Link href="/" className="navbar-link navbar-mobile-link">
+              <Link
+                href="/"
+                className="navbar-link navbar-mobile-link"
+                onClick={handleMobileMenu}
+              >
                 Get Started
               </Link>
             </div>

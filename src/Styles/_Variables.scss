@@ -1,4 +1,4 @@
-// Fonts from google fonts but on local
+// Fonts from google fonts but stored on local
 @font-face {
   font-family: "Space Grotesk";
   src: url("/fonts/SpaceGrotesk-Light.ttf");
@@ -29,7 +29,13 @@ button {
 $color-primary: #1f2021;
 $color-fg-primary: rgb(76, 163, 197);
 $color-secondary: #383838b6;
-$graident-bg: linear-gradient(114deg, #0d0d0d 50%, #090909 47%, #090909 100%);
+$graident-bg: linear-gradient(
+  to right,
+  #080808 0%,
+  #090909 12%,
+  #191919 55%,
+  #0f0f0f 90%
+);
 $color-text-primary: rgb(114, 179, 244);
 $color-text-heading: rgb(123, 189, 255);
 $color-text: #f7f7f7f1;
@@ -45,6 +51,6 @@ $screen-size: 1200px;
 //maps
 $font-weights: (
   "regular": 300,
-  "semi-bold": 600,
+  "medium": 600,
   "bold": 800,
 );

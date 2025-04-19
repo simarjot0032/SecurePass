@@ -4,11 +4,16 @@ import Navbar from "@Compoenets/Navbar";
 import Footer from "@Compoenets/Footer";
 import Logo from "@assets/Logo.webp";
 import Image from "next/image";
-import "@Styles/Generator.scss";
+import "@Styles/GeneratorPage.scss";
 import "@Styles/UniversalStyle.scss";
 import { FaArrowRight } from "react-icons/fa6";
+import Generator from "../Components/Generator";
 
 export default function page() {
+  const handleScroll = () => {
+    const generator = document.querySelector(".generator-container");
+    generator?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
   return (
     <>
       <Navbar />
@@ -25,19 +30,23 @@ export default function page() {
                 <h1 className="pass-generator-hero-heading">
                   What to Generate a{" "}
                   <span className="pass-generator-focus-text">
-                    {" "}
+                    <br />
                     Strong Password?
                   </span>
                 </h1>
                 <div>
-                  <button className="pass-generator-hero-get-started">
-                    Get Started
+                  <button
+                    className="pass-generator-hero-get-started"
+                    onClick={handleScroll}
+                  >
+                    Generate
                     <FaArrowRight size={25} />
                   </button>
                 </div>
               </div>
             </div>
           </div>
+          <Generator />
         </div>
       </div>
       <Footer />

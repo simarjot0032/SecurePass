@@ -1,9 +1,8 @@
 import { BsDatabaseLock } from "react-icons/bs";
-
 import { TbLockPassword } from "react-icons/tb";
 import { CgPassword } from "react-icons/cg";
 type Products = {
-  productIcon: React.ElementType;
+  productIcon: React.ElementType; // ()=>JSX.Element
   productName: string;
   productDescription: string;
   productLink: string;
@@ -11,7 +10,7 @@ type Products = {
 
 export const ProductsArray: Products[] = [
   {
-    productIcon: BsDatabaseLock,
+    productIcon: BsDatabaseLock, // ()=><BsDataBaseLock>
     productName: "Password Manager",
     productDescription:
       "Secure Vault is a powerful and easy-to-use password manager designed to keep your credentials, card details and other senstive details encrypted, safe and organized.  ",

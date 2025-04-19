@@ -8,12 +8,12 @@ interface Props {
   productDescription: string;
   productLink: string;
 }
-export default function Product({
+export const Product = ({
   productDescription,
   productHeading,
   ProductImage,
   productLink,
-}: Props) {
+}: Props) => {
   return (
     <>
       <div className="product-container">
@@ -32,4 +32,4 @@ export default function Product({
       </div>
     </>
   );
-}
+};

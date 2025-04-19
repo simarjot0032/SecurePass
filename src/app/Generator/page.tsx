@@ -7,7 +7,7 @@ import Image from "next/image";
 import "@Styles/GeneratorPage.scss";
 import "@Styles/UniversalStyle.scss";
 import { FaArrowRight } from "react-icons/fa6";
-import Generator from "./Components/Generator";
+import Generator from "../Components/Generator";
 
 export default function page() {
   const handleScroll = () => {

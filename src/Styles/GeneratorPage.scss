@@ -1,0 +1,67 @@
+@use "./Variables";
+.pass-generator {
+  font-family: Variables.$font-primary;
+  &-hero-section {
+    padding: 10px;
+  }
+  &-focus-text {
+    color: Variables.$color-text-heading !important;
+  }
+  &-hero-logo {
+    width: 100%;
+
+    object-fit: contain;
+  }
+  &-hero-heading-container {
+    text-align: center;
+    color: Variables.$color-text;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  &-hero-heading {
+    font-size: 2.5rem;
+  }
+  &-hero-heading-container > div {
+    display: flex;
+    justify-content: center;
+  }
+  &-hero-get-started {
+    border: 1px solid Variables.$color-fg-primary;
+    padding: 10px 20px;
+    margin: 20px 0;
+    font-size: 1.2rem;
+    border-radius: 20px;
+    background-color: transparent;
+    color: Variables.$color-text-heading;
+    transition: all 0.2s linear;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  &-hero-get-started:hover {
+    color: Variables.$color-text;
+    transform: scale(1.09);
+    background: Variables.$color-secondary;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .pass-generator {
+    &-hero-section {
+      display: flex;
+      justify-content: center;
+    }
+    &-hero-logo {
+      width: 50%;
+      max-width: 450px;
+    }
+    &-hero-heading-container > div {
+      justify-content: start;
+    }
+    &-hero-heading {
+      text-align: left;
+    }
+  }
+}

@@ -74,6 +74,7 @@
     border-radius: 10px;
     padding: 5px;
   }
+
   &-mobile-close {
     display: none;
   }
@@ -251,5 +252,16 @@
   .dropdown-container > .navbar-link {
     font-size: 20px;
     hyphens: auto;
+  }
+  .navbar-login-container,
+  .navbar-get-started-container {
+    border-width: 1px;
+    background: transparent;
+    transition: all 0.2s ease;
+  }
+  .navbar-login-container:hover,
+  .navbar-get-started-container:hover {
+    transform: scale(1.1);
+    background: Variables.$color-secondary;
   }
 }

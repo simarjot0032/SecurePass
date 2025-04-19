@@ -8,7 +8,7 @@ import Footer from "@Compoenets/Footer";
 import Navbar from "@Compoenets/Navbar";
 import { FAQData, ProductsArray, FeatureCardData } from "@/Data";
 import Image from "next/image";
-import { FeatureCard, FAQ, Product } from "./Components";
+import { FeatureCard, FAQ, Product } from "../Components";
 
 export default function HomePage() {
   const [questionIndex, setQuestionIndex] = useState<number>(-1);

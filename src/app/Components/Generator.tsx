@@ -104,7 +104,7 @@ export default function Generator() {
                             htmlFor="additional-options-input"
                             className="label"
                           >
-                            A-Z {"Captial Letters"}
+                            A-Z {"(Captial Letters)"}
                           </label>
                         </div>
                       </form>

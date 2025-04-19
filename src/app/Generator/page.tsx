@@ -4,7 +4,7 @@ import Navbar from "@Compoenets/Navbar";
 import Footer from "@Compoenets/Footer";
 import Logo from "@assets/Logo.webp";
 import Image from "next/image";
-import "@Styles/Generator.scss";
+import "@Styles/GeneratorPage.scss";
 import "@Styles/UniversalStyle.scss";
 import { FaArrowRight } from "react-icons/fa6";
 import Generator from "./Components/Generator";

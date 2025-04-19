@@ -10,7 +10,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { FaAngleUp } from "react-icons/fa6";
 import { FaAngleDown } from "react-icons/fa6";
-import DropDown from "./DropDown";
+import { DropDown } from "./DropDown";
 
 export default function Navbar() {
   const [shadow, setShadow] = useState<string | null>();
